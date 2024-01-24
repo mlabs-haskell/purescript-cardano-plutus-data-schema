@@ -19,8 +19,10 @@ module Cardano.Plutus.DataSchema
   , class PlutusSchemaToRowListI
   , class AllUnique2
   , class ValidPlutusSchema
+  , module X
   ) where
 
+import Cardano.Plutus.DataSchema.Nat (class KnownNat, Nat, S, Z) as X
 import Cardano.Plutus.DataSchema.Nat (Nat)
 import Cardano.Plutus.DataSchema.RowList (class AllUniqueLabels)
 import Cardano.Plutus.DataSchema.Indexed
