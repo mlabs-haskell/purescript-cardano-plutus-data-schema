@@ -2,9 +2,9 @@
 
 This package implements type-level machinery that we use across the [`cardano-transaction-lib`](https://github.com/Plutonomicon/cardano-transaction-lib/) ecosystem to specify  `PlutusData` encodings for arbitrary algebraic data types.
 
-It is similar in spirit to [`PlutusTx.makeIsDataIndexed`](https://github.com/IntersectMBO/plutus/blob/eceae8831b8186655535dee587486dbd3fd037f4/plutus-ledger-api/src/PlutusLedgerApi/V1/Credential.hs#L78) from Plutus, that is implemented in TemplateHaskell.
+It is similar in spirit to [`PlutusTx.makeIsDataIndexed`](https://github.com/IntersectMBO/plutus/blob/eceae8831b8186655535dee587486dbd3fd037f4/plutus-ledger-api/src/PlutusLedgerApi/V1/Credential.hs#L78) from Plutus, which is implemented in TemplateHaskell.
 
-In PureScript, we couldn't use templates for the lack of them, and we couldn't rely on the ordering of record fields and constructors in ADTs when using `Generic` machinery, because PureScript always sorts them alphabetically. So, this module was invented to fix the order when deriving instances via `Generic`.
+In PureScript, we couldn't use TemplateHaskell-style codegen due to the lack of it, and we couldn't rely on the ordering of record fields and constructors in ADTs when using `Generic` machinery, because PureScript always sorts them alphabetically. So, this module was invented to fix the ordering when deriving instances via `Generic`.
 
 A quick usage example (`S` and `Z` are for type-level [Peano numbers](https://wiki.haskell.org/Peano_numbers)):
 
