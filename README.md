@@ -55,3 +55,5 @@ instance ToData FType where
 instance FromData FType where
   fromData = genericFromData
 ```
+
+For more examples, see [the test suite of `purescript-plutus-types`](https://github.com/mlabs-haskell/purescript-plutus-types/blob/f454204cccffe94db1c097949a663ea897c41cf3/test/Main.purs#L147)
