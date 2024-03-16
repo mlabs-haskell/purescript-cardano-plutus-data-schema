@@ -6,6 +6,8 @@ It is similar in spirit to [`PlutusTx.makeIsDataIndexed`](https://github.com/Int
 
 In PureScript, we couldn't use TemplateHaskell-style codegen due to the lack of it, and we couldn't rely on the ordering of record fields and constructors in ADTs when using `Generic` machinery, because PureScript always sorts them alphabetically. So, this module was invented to fix the ordering when deriving instances via `Generic`.
 
+## Example
+
 A quick usage example (`S` and `Z` are for type-level [Peano numbers](https://wiki.haskell.org/Peano_numbers)):
 
 ```purescript
@@ -57,3 +59,7 @@ instance FromData FType where
 ```
 
 For more examples, see [the test suite of `purescript-plutus-types`](https://github.com/mlabs-haskell/purescript-plutus-types/blob/f454204cccffe94db1c097949a663ea897c41cf3/test/Main.purs#L147)
+
+## Testing
+
+The tests for this packages are located in [`purescript-cardano-types`](https://github.com/mlabs-haskell/purescript-plutus-types/blob/master/test/Main.purs)
