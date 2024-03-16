@@ -33,6 +33,19 @@ import Cardano.Plutus.DataSchema.Indexed
   , RowListI
   )
 import Prim.RowList (Cons, Nil, RowList)
+import Cardano.Plutus.DataSchema.Indexed
+  ( ConsI
+  , NilI
+  , RowListI
+  , class AllUniqueLabelsI
+  , class GetIndexWithLabel
+  , class GetLabelIndex
+  , class GetLabelWithIndex
+  , class GetWithLabel
+  , class IndexRowList
+  , class IndexRowListWithAcc
+  , class UniqueIndices
+  ) as X
 
 {- This modules defines various data types (kinds) which are used to encode enough the *structure* of the Plutus Data that corresponds to a
    given data type at the type level.
