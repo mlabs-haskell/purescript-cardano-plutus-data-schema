@@ -62,4 +62,4 @@ For more examples, see [the test suite of `purescript-plutus-types`](https://git
 
 ## Testing
 
-The tests for this packages are located in [`purescript-cardano-types`](https://github.com/mlabs-haskell/purescript-plutus-types/blob/master/test/Main.purs)
+The tests for this package are located in [`purescript-cardano-types`](https://github.com/mlabs-haskell/purescript-plutus-types/blob/master/test/Main.purs)
