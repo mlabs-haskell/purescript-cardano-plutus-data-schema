@@ -41,6 +41,18 @@ let
         installPhase = "ln -s $src $out";
       };
 
+    "typelevel-prelude" = pkgs.stdenv.mkDerivation {
+        name = "typelevel-prelude";
+        version = "v7.0.0";
+        src = pkgs.fetchgit {
+          url = "https://github.com/purescript/purescript-typelevel-prelude.git";
+          rev = "dca2fe3c8cfd5527d4fe70c4bedfda30148405bf";
+          sha256 = "0x86mrg33kpnrnsfp4p3c92j5lpyqzy87bxdynwf7smk3inqr2jc";
+        };
+        phases = "installPhase";
+        installPhase = "ln -s $src $out";
+      };
+
   };
 
   cpPackage = pkg:
