@@ -1,5 +1,6 @@
 module Cardano.Plutus.DataSchema.RowList
   ( class AllUniqueLabels
+  , class SameLength
   ) where
 
 import Type.RowList (class ListToRow)
