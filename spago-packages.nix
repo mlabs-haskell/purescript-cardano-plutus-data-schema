@@ -41,6 +41,30 @@ let
         installPhase = "ln -s $src $out";
       };
 
+    "type-equality" = pkgs.stdenv.mkDerivation {
+        name = "type-equality";
+        version = "v4.0.1";
+        src = pkgs.fetchgit {
+          url = "https://github.com/purescript/purescript-type-equality.git";
+          rev = "0525b7d39e0fbd81b4209518139fb8ab02695774";
+          sha256 = "1ass38jdycsjisdimdc4drg2w8vkkwp6lkvz3kvy7q0h98vdmlbr";
+        };
+        phases = "installPhase";
+        installPhase = "ln -s $src $out";
+      };
+
+    "typelevel-prelude" = pkgs.stdenv.mkDerivation {
+        name = "typelevel-prelude";
+        version = "v7.0.0";
+        src = pkgs.fetchgit {
+          url = "https://github.com/purescript/purescript-typelevel-prelude.git";
+          rev = "dca2fe3c8cfd5527d4fe70c4bedfda30148405bf";
+          sha256 = "0x86mrg33kpnrnsfp4p3c92j5lpyqzy87bxdynwf7smk3inqr2jc";
+        };
+        phases = "installPhase";
+        installPhase = "ln -s $src $out";
+      };
+
   };
 
   cpPackage = pkg:

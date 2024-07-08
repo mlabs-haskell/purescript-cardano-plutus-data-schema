@@ -7,5 +7,4 @@ import Effect.Class.Console (log)
 
 main :: Effect Unit
 main = do
-  log "🍝"
-  log "You should add some tests."
+  log "The tests for this package are located in purescript-cardano-types: https://github.com/mlabs-haskell/purescript-plutus-types/blob/master/test/Main.purs"
